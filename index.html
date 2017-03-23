@@ -2,41 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>todos</title>
+    <title>TodoApp</title>
 </head>
 <body>
-<fileset>
-    What needs to be done?
-   <p> <select size="4" name="list_todo" multiple>
+<div class="todos-header">
+        <h1 class="todos-title">Todos</h1>
+</div>
+<div class="todos-main">
+    <div class="todos-add">
+        <button class="todo-add_select-all"
+                aria-label="Отметить все как выполненные">
+        </button>
+        <input class="todo-add_input" placeholder="What needs to be done?"
+               aria-label="Поле добавления todo" />
+    </div>
+    <div class="todos-list">
+        <div class="todo-item”>
+        <textarea class="todo-item_text">
+        HTML
+        </textarea>
+        <input type="checkbox" checked="checked"
+               class="todo-item_ready-mark" aria-label="Пометить как невыполненное" />
+        <button class="todo-item_remove" aria-label="Удалить todo"></button>
+    </div>
+    <div class="todos-list">
+        <div class="todo-item __ready”>
+        <textarea class="todo-item_text">
+        CSS
+        </textarea>
+        <input type="checkbox" checked="checked"
+               class="todo-item_ready-mark" aria-label="Пометить как невыполненное" />
+        <button class="todo-item_remove" aria-label="Удалить todo"></button>
+    </div>
 
-        <option>
-            HTML
-        </option>
-        <option>
-           <del>CSS</del>
-        </option>
-        <option>
-            JS
-        </option>
-        <option>
-            JS Tools
-        </option>
-
-    </select>
-   </p>
-
-    <table>
-        <tr>
-            <td>3 items left </td>
-            <td>&nbsp; &nbsp; &nbsp; &nbsp;</td>
-            <td><input type="button" value="All" style="width: 30px"></td>
-            <td><input type="button" value="Active" style="width: 60px"></td>
-            <td><input type="button" value="Completed" style="width: 80px"></td>
-            <td>&nbsp; &nbsp; &nbsp; &nbsp;</td>
-            <td><input type="button" value="Clear completed"></td>
-        </tr>
-    </table>
-
-</fileset>
+    </div>
+    <div class=“todos-actions-bar">
+        <div class="todos-actions-bar_counter"
+             aria-label="Количество не сделанных todo">
+            n todo
+        </div>
+        <div class="todos-filters">
+            <button class="todos-filter __active" data-filter="all"
+                    aria-label="Фильтр: показать все">
+                All
+            </button>
+            <button class="todos-filter" data-filter="ready"
+                    aria-label="Фильтр: показать невыполненные">
+                Active
+            </button>
+            <button class="todos-filter" data-filter="unready"
+                    aria-label="Фильтр: показать выполненные">
+                Completed
+            </button>
+        </div>
+        <button class="todos-actions-bar_clear-completed">
+            Clear completed
+        </button>
+    </div>
+</div>
 </body>
 </html>
