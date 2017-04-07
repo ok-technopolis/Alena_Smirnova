@@ -1,0 +1,8 @@
+.todo-item_remove {
+    background-image:url('icons/close.png');
+    width: 22.5px;
+    height: 22.5px;
+    display: none;
+    position: absolute;
+
+}
