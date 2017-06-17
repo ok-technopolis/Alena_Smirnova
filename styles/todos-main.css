@@ -1,9 +1,0 @@
-.todos-main {
-    width: 450px; /* Ширина элемента в пикселах */
-    padding: 10px; /* Поля вокруг текста */
-    margin: auto; /* Выравниваем по центру */
-    background: #ffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
-
-
-}
